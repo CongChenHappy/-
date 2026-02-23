@@ -6,103 +6,24 @@
     <title>Cong Chen - My Lab</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #004080;
-            color: white;
-            padding: 15px 0;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .cv-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .cv-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .lab-members {
+        /* Grid layout for lab members */
+        .lab-members-grid {
             display: flex;
             flex-wrap: wrap;
+            gap: 30px;
             justify-content: center;
-            gap: 20px;
         }
 
         .member-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            overflow: hidden;
-            width: 300px;
-            text-align: center;
-            padding-bottom: 20px;
+            flex: 1 1 300px; /* Minimum width 300px, grow to fill space */
+            max-width: 350px;
         }
 
-        .member-card img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-top: 20px;
-        }
-
-        .member-info {
-            padding: 15px 20px;
-        }
-
-        .member-info h3 {
-            margin: 10px 0;
-        }
-
-        .member-info p {
-            margin: 10px 0;
-            text-align: left;
-        }
-
-        .member-info a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-
-        .member-info a:hover {
-            text-decoration: underline;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
+        /* Optional: Ensure member cards in a row are aligned */
+        @media (max-width: 768px) {
+            .member-card {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
@@ -126,8 +47,7 @@
         <p>My Lab @ Dartmouth College</p>
     </div>
 
-    <section class="lab-members">
-        <h2>Lab Members</h2>
+    <div class="lab-members-grid">
 
         <!-- Undergraduate Researcher -->
         <article class="member-card">
@@ -137,18 +57,9 @@
                 <p><strong>Undergraduate Researcher</strong><br>
                 Thayer School of Engineering, Dartmouth College</p>
                 <p>
-                    Anderson is a junior majoring in Electrical Engineering, with a minor 
-                    in Chinese and Statistics. He is interested in power systems modeling 
-                    and grid resilience in our evolving energy grid.
+                    Interested in power systems modeling and grid resilience. Focuses on analyzing energy storage systems and simulating human behavior in demand-side energy markets.
                 </p>
-                <p>
-                    His research focuses on analyzing energy storage systems and simulating 
-                    human behavior in demand-side energy markets.
-                </p>
-                <p>
-                    Outside of school, he enjoys exploring the great outdoors and finding 
-                    great books and articles to pore over (suggestions welcome :)).
-                </p>
+                <p>Outside of school, enjoys exploring the outdoors and reading.</p>
             </div>
         </article>
 
@@ -160,13 +71,9 @@
                 <p><strong>Graduate Research Assistant</strong><br>
                 Thayer School of Engineering, Dartmouth College</p>
                 <p>
-                    He/She is conducting research on how AI and large language model (LLM)-based 
-                    agents can (1) model and simulate participant behavior in energy markets and 
-                    (2) assist with strategic decision-making tasks, including bidding strategy optimization.
+                    Research on AI and LLM-based agents to model participant behavior in energy markets and optimize bidding strategies.
                 </p>
-                <p>
-                    Outside of research, enjoys skiing and discovering new music.
-                </p>
+                <p>Outside of research, enjoys skiing and discovering new music.</p>
                 <p>
                     <strong>Education</strong><br>
                     B.A., Engineering Sciences, Dartmouth College (2025)<br>
@@ -183,23 +90,18 @@
                 <p><strong>Postdoctoral Researcher</strong><br>
                 Thayer School of Engineering, Dartmouth College</p>
                 <p>
-                    Bohang’s research focuses on convex optimization for power system 
-                    operation and planning, particularly unbalanced three-phase distribution 
-                    networks and DER integration. Recently, he has been developing scalable 
-                    algorithms for computing dynamic operating envelopes (DOEs).
+                    Research on convex optimization for power system operation and planning, especially unbalanced three-phase networks and DER integration. Developing scalable algorithms for dynamic operating envelopes (DOEs).
                 </p>
                 <p>
                     <strong>Education</strong><br>
-                    B.S., Mathematics & Physics Basic Science, UESTC (2020)<br>
-                    Ph.D., Information Engineering, The Chinese University of Hong Kong (2025)
+                    B.S., Mathematics & Physics, UESTC (2020)<br>
+                    Ph.D., Information Engineering, CUHK (2025)
                 </p>
-                <p>
-                    <a href="https://bohang-fang.github.io/" target="_blank">Personal Website</a>
-                </p>
+                <p><a href="https://bohang-fang.github.io/" target="_blank">Personal Website</a></p>
             </div>
         </article>
 
-        <!-- Ph.D. Students -->
+        <!-- Ph.D. Student -->
         <article class="member-card">
             <img src="img/SLi.jpg" alt="Shaoze Li">
             <div class="member-info">
@@ -207,16 +109,13 @@
                 <p><strong>Ph.D. Student</strong><br>
                 Thayer School of Engineering, Dartmouth College</p>
                 <p>
-                    Shaoze conducts research at the intersection of optimization, economics, 
-                    and electricity markets.
+                    Research at the intersection of optimization, economics, and electricity markets.
                 </p>
-                <p>
-                    Outside of research, he enjoys weightlifting and playing basketball.
-                </p>
+                <p>Enjoys weightlifting and basketball.</p>
                 <p>
                     <strong>Education</strong><br>
-                    M.S., Management Science and Engineering, University of Chinese Academy of Sciences (UCAS)<br>
-                    B.S., Management Science and Engineering, North China Electric Power University (NCEPU)
+                    M.S., Management Science and Engineering, UCAS<br>
+                    B.S., Management Science and Engineering, NCEPU
                 </p>
             </div>
         </article>
@@ -228,42 +127,31 @@
                 <p><strong>Ph.D. Student (Visiting)</strong><br>
                 Thayer School of Engineering, Dartmouth College</p>
                 <p>
-                    Jingguan’s research focuses on demand-side aggregation, energy storage 
-                    operation, and optimization under uncertainty.
+                    Research on demand-side aggregation, energy storage operation, and optimization under uncertainty.
                 </p>
-                <p>
-                    In his free time, he enjoys traveling and seeking new experiences, guided 
-                    by the belief that it is not failure we regret most, but the chances we never take.
-                </p>
+                <p>Enjoys traveling and seeking new experiences.</p>
                 <p>
                     <strong>Education</strong><br>
                     B.S., Electrical Engineering, Huazhong University of Science and Technology (2022)<br>
                     Ph.D. Candidate, Huazhong University of Science and Technology<br>
-                    Visiting Student, Dartmouth College (since September 2025)
+                    Visiting Student, Dartmouth College (since Sep 2025)
                 </p>
-                <p>
-                    Ph.D. Advisors: Prof. Xiaomeng Ai and Prof. Jiakun Fang<br>
-                    Visiting Advisor: Prof. Cong Chen
+                <p>Ph.D. Advisors: Prof. Xiaomeng Ai & Prof. Jiakun Fang<br>
+                   Visiting Advisor: Prof. Cong Chen
                 </p>
             </div>
         </article>
 
         <article class="member-card">
-            <img src="img/YYu.jpg" alt="Yaxuan Yu">
+            <img src="img/YYu.JPG" alt="Yaxuan Yu">
             <div class="member-info">
                 <h3>Yaxuan Yu</h3>
                 <p><strong>Ph.D. Student</strong><br>
                 Thayer School of Engineering, Dartmouth College</p>
                 <p>
-                    Yaxuan conducts research on electricity market design, with a particular 
-                    interest in pricing mechanisms for real-time power systems with energy 
-                    storage. Her work focuses on improving market transparency and efficiency 
-                    under intertemporal operational constraints.
+                    Research on electricity market design, pricing mechanisms for real-time power systems with energy storage, and improving market transparency.
                 </p>
-                <p>
-                    Beyond research, she enjoys reading novels, hiking, ice skating, 
-                    painting, cooking, and traveling.
-                </p>
+                <p>Enjoys reading novels, hiking, ice skating, painting, cooking, and traveling.</p>
                 <p>
                     <strong>Education</strong><br>
                     M.S., Management Science and Engineering, Tongji University<br>
@@ -279,23 +167,19 @@
                 <p><strong>Ph.D. Student (Visiting)</strong><br>
                 Thayer School of Engineering, Dartmouth College</p>
                 <p>
-                    I am currently working on energy management strategies for integrated energy systems, 
-                    with a focus on pricing design, demand response analysis, and market-based trading mechanisms. 
-                    My research aims to improve the efficiency and flexibility of modern energy markets.
+                    Research on energy management strategies for integrated energy systems, focusing on pricing design, demand response analysis, and market-based trading mechanisms.
                 </p>
-                <p>
-                    Outside of research, I enjoy snowboarding and swimming.
-                </p>
+                <p>Enjoys snowboarding and swimming.</p>
                 <p>
                     <strong>Education</strong><br>
                     B.S., Electrical Engineering, Taiyuan University of Technology<br>
                     Ph.D., Electrical Engineering (via undergraduate recommendation), Taiyuan University of Technology<br>
-                    Supervisor: Hongbin Sun, Academician of Chinese Academy of Sciences
+                    Supervisor: Hongbin Sun, Academician of CAS
                 </p>
             </div>
         </article>
 
-    </section>
+    </div>
 </div>
 
 </body>
