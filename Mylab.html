@@ -6,7 +6,6 @@
 <title>Cong Chen - My Lab</title>
 <link rel="stylesheet" href="styles.css">
 <style>
-    /* Two-column grid for lab members */
     .lab-members-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -25,6 +24,11 @@
         text-align: center;
         box-sizing: border-box;
         height: 100%;
+        transition: transform 0.2s ease;
+    }
+
+    .member-card:hover {
+        transform: translateY(-5px);
     }
 
     .member-card img {
@@ -37,16 +41,25 @@
 
     .member-info h3 {
         margin-bottom: 10px;
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     .member-info p {
         margin-bottom: 10px;
         font-size: 0.95em;
-        line-height: 1.4;
+        line-height: 1.5;
+        text-align: left;
     }
 
-    /* Responsive adjustments */
+    .member-info a {
+        color: #0073e6;
+        text-decoration: none;
+    }
+
+    .member-info a:hover {
+        text-decoration: underline;
+    }
+
     @media (max-width: 900px) {
         .lab-members-grid {
             grid-template-columns: 1fr;
@@ -88,41 +101,48 @@
             <img src="img/AToler.jpg" alt="Anderson Toler">
             <div class="member-info">
                 <h3>Anderson Toler</h3>
-                <p><strong>Undergraduate Researcher</strong></p>
-                <p>Focused on energy storage analysis, demand-side modeling, and grid resilience. Enjoys exploring the outdoors and reading.</p>
+                <p><strong>Undergraduate Researcher</strong><br>Thayer School of Engineering, Dartmouth College</p>
+                <p>Anderson dives into energy storage systems and explores how people interact with the electricity grid. He models demand-side behavior and experiments with grid resilience strategies.</p>
+                <p><strong>Education:</strong> B.S. Electrical Engineering, minor in Chinese & Statistics (expected 2026)</p>
+                <p><strong>Hobbies:</strong> Hiking, discovering hidden gems in books, and chasing adventures outdoors.</p>
             </div>
         </article>
-
-
 
         <!-- Postdoctoral Researcher -->
         <article class="member-card">
             <img src="img/BFang.png" alt="Bohang Fang">
             <div class="member-info">
                 <h3>Bohang Fang</h3>
-                <p><strong>Postdoctoral Researcher</strong></p>
-                <p>Research on convex optimization for power systems, unbalanced networks, and DER integration. Developing scalable algorithms for dynamic operating envelopes.</p>
+                <p><strong>Postdoctoral Researcher</strong><br>Thayer School of Engineering, Dartmouth College</p>
+                <p>Bohang pushes the limits of power system optimization. He develops algorithms for unbalanced networks, integrates distributed energy resources, and creates dynamic operating envelopes to make grids smarter and more reliable.</p>
+                <p><strong>Education:</strong> B.S. Mathematics & Physics, UESTC (2020)<br>Ph.D. Information Engineering, CUHK (2025)</p>
+                <p><strong>Hobbies:</strong> Traveling and geeking out on new research breakthroughs.</p>
                 <p><a href="https://bohang-fang.github.io/" target="_blank">Personal Website</a></p>
             </div>
         </article>
 
+        <!-- Ph.D. Student (Visiting) -->
         <article class="member-card">
             <img src="img/HYang" alt="Haotian Yang">
             <div class="member-info">
                 <h3>Haotian Yang</h3>
-                <p><strong>Ph.D. Student (Visiting)</strong></p>
-                <p>Research on energy management strategies for integrated energy systems, focusing on pricing, demand response, and market-based trading mechanisms. Enjoys snowboarding and swimming.</p>
+                <p><strong>Ph.D. Student (Visiting)</strong><br>Thayer School of Engineering, Dartmouth College</p>
+                <p>Haotian is shaping smarter energy markets. He experiments with pricing, demand response, and market-driven trading strategies to make integrated energy systems more flexible and efficient.</p>
+                <p><strong>Education:</strong> B.S. Electrical Engineering, Taiyuan University of Technology<br>Ph.D. Electrical Engineering, Taiyuan University of Technology</p>
+                <p><strong>Hobbies:</strong> Snowboarding down fresh slopes and swimming to clear his mind.</p>
             </div>
         </article>
-        
 
-
+        <!-- Ph.D. Student (Visiting) -->
         <article class="member-card">
             <img src="img/JLiu.jpg" alt="Jingguan Liu">
             <div class="member-info">
                 <h3>Jingguan Liu</h3>
-                <p><strong>Ph.D. Student (Visiting)</strong></p>
-                <p>Research on demand-side aggregation, energy storage optimization under uncertainty. Enjoys traveling and new experiences.</p>
+                <p><strong>Ph.D. Student (Visiting)</strong><br>Thayer School of Engineering, Dartmouth College</p>
+                <p>Jingguan experiments with energy storage and demand aggregation. He thrives on solving problems under uncertainty and seeks new ways to optimize system operations.</p>
+                <p><strong>Education:</strong> B.S. Electrical Engineering, HUST (2022)<br>Ph.D. Candidate, HUST<br>Visiting Student, Dartmouth College (since 2025)</p>
+                <p><strong>Hobbies:</strong> Traveling and embracing new experiences.</p>
+                <p>Ph.D. Advisors: Prof. Xiaomeng Ai & Prof. Jiakun Fang<br>Visiting Advisor: Prof. Cong Chen</p>
             </div>
         </article>
 
@@ -131,8 +151,10 @@
             <img src="img/JKim.jpeg" alt="Justin Sang-il Kim">
             <div class="member-info">
                 <h3>Justin Sang-il Kim</h3>
-                <p><strong>Graduate Research Assistant</strong></p>
-                <p>Researching AI and LLM-based agents for energy market simulation and bidding strategy optimization. Enjoys skiing and discovering new music.</p>
+                <p><strong>Graduate Research Assistant</strong><br>Thayer School of Engineering, Dartmouth College</p>
+                <p>Justin designs AI agents and LLM-based models to simulate and optimize energy market behaviors. He loves turning complex market strategies into actionable insights.</p>
+                <p><strong>Education:</strong> B.A. Engineering Sciences, Dartmouth College (2025)<br>B.E. Energy Engineering, Dartmouth College (2025)</p>
+                <p><strong>Hobbies:</strong> Skiing down mountains and discovering fresh music playlists.</p>
             </div>
         </article>
 
@@ -141,21 +163,24 @@
             <img src="img/SLi.jpg" alt="Shaoze Li">
             <div class="member-info">
                 <h3>Shaoze Li</h3>
-                <p><strong>Ph.D. Student</strong></p>
-                <p>Research at the intersection of optimization, economics, and electricity markets. Enjoys weightlifting and basketball.</p>
+                <p><strong>Ph.D. Student</strong><br>Thayer School of Engineering, Dartmouth College</p>
+                <p>Shaoze explores the crossroads of optimization, electricity markets, and economics. He’s driven by designing smarter market strategies and understanding system dynamics.</p>
+                <p><strong>Education:</strong> M.S. Management Science & Engineering, UCAS<br>B.S. Management Science & Engineering, NCEPU</p>
+                <p><strong>Hobbies:</strong> Weightlifting and basketball to keep the mind sharp and the body strong.</p>
             </div>
         </article>
-        
+
+        <!-- Ph.D. Student -->
         <article class="member-card">
             <img src="img/YYu.JPG" alt="Yaxuan Yu">
             <div class="member-info">
                 <h3>Yaxuan Yu</h3>
-                <p><strong>Ph.D. Student</strong></p>
-                <p>Focus on electricity market design, pricing mechanisms, and improving transparency with energy storage. Enjoys reading, hiking, and painting.</p>
+                <p><strong>Ph.D. Student</strong><br>Thayer School of Engineering, Dartmouth College</p>
+                <p>Yaxuan works to make electricity markets transparent and efficient. She experiments with pricing mechanisms for real-time systems and integrates energy storage into smarter market designs.</p>
+                <p><strong>Education:</strong> M.S. Management Science & Engineering, Tongji University<br>B.S. Industrial Engineering, Sichuan University</p>
+                <p><strong>Hobbies:</strong> Reading, hiking, painting, cooking, and traveling to recharge her creativity.</p>
             </div>
         </article>
-
-
 
     </div>
 </div>
