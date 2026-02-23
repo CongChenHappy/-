@@ -6,111 +6,297 @@
     <title>Cong Chen - My Lab</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Some basic styling to position elements */
-        .cv-container {
-            max-width: 800px;
-            margin: 0 auto;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
         }
-        .project {
+
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style: none;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
         }
-        .project img {
-            max-width: 200px; /* Adjust image size */
-            margin-right: 20px;
+
+        nav ul li {
+            margin: 0 15px;
         }
-        .project .description {
-            flex: 1;
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .cv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .cv-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .lab-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .member-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .member-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        .member-info {
+            padding: 15px 20px;
+        }
+
+        .member-info h3 {
+            margin: 10px 0;
+        }
+
+        .member-info p {
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        .member-info a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        .member-info a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ResearchHighlights.html">Research Highlights</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="Mylab.html">Mylab</a></li>
-                <li><a href="others.html">Others</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="cv-container">
-        <div class="cv-header">
-            <h1>Cong Chen</h1>
-            <p> My Lab @ Dartmouth College</p>
-        </div>
-        
-        <div class="cv-main">
-            <h2>Highlight 1: Large-scale DER aggregation</h2>
-            <div class="image-container">
-                <figure class="centered-figure">
-                    <img src="img/Tesla_image.jpg" alt="Tesla_image Image">
-                    <figcaption>An example of distributed energy resource aggregator (DERA) is the Tesla virtual power plant.</figcaption>
-                </figure>
-            </div>          
-            <!-- <img src="img/Tesla_image.jpg" alt="Tesla_image Image" width="250" height="200"> -->
-            <div class="project">
-                <img src="img/project1_image.jpg" alt="Project 1 Image">
-                <div class="description">
-                    <h3>Market-based coordination mechanism for DSO-DERA-ISO </h3>
-                    <p>I proposed a novel coordination mechanism in the form of a forward auction to allocate 
-                        the dynamic distribution network accesses to DERAs. The proposed allocation mechanism 
-                        decouples DSO-DERA-ISO real-time operations and achieves the simplest coordination with 
-                        minimal deviation from the standard operating procedures. I established theoretical results 
-                        about individual rationality, revenue adequacy, and price monotonicity for the proposed 
-                        mechanism in both robust and risk (CVaR) based allocations.
-                        <a href="https://arxiv.org/abs/2307.01999">[link]</a> </p>
-                </div>
-            </div>
-            
-            <div class="project">
-                <img src="img/project2_image.jpg" alt="Project 2 Image">
-                <div class="description">
-                    <h3>Competitive DER aggregation and bidding algorithm </h3>
-                    <p>I proposed the first profit-maximizing competitive DER aggregation solution for a DERA to 
-                        participate in the wholesale electricity market as a virtual storage participant. The 
-                        proposed aggregation solution ensures that customers of the DERA receive surplus competitive 
-                        with than under the utility's retail rate. And the social surplus achieved the same level as 
-                        if individual customers directly participate in the wholesale market with its DERs.
-                        <a href="https://arxiv.org/abs/2307.02004">[link]</a></p>
-                </div>
-            </div>
 
-            <!-- Add more projects using the same structure -->
-            <p>&nbsp;</p> 
-            <p>&nbsp;</p>  
-            <p>&nbsp;</p>             
-            <h2>Highlight 2: Storage participation in electricity markets</h2>
-            <div class="image-container">
-                <figure class="centered-figure">
-                    <img src="img/SoCdependent.jpg" alt="SoCDepended" width="450" height="350">
-                    <figcaption>California independent system operator initiatives the proposal for storage SoC-dependent bid.</figcaption>
-                </figure>
-            </div>  
-            <h3>Convexifying electricity markets clearing with SoC-dependent bid  </h3>
-            <p>Wholesale market operators are considering allowing merchant storage participants 
-                to submit state-of-charge (SoC) dependent bids to capture more accurately the operation 
-                and opportunity costs  of storage. However, SoC-dependent bid results in an intractable 
-                market-clearing model. I proposed a sufficient condition over the SoC-dependent bid to 
-                remove the non-convexity and made the multi-interval dispatch with SoC-dependent bids a 
-                standard convex piece-wise linear program. Such a convex market clearing for SoC-dependent 
-                bid increased storage profits and decreased system cost, compared to SoC-independent bid.
-                <a href="https://ieeexplore.ieee.org/abstract/document/10037211">[link]</a> </p>
-            <div class="image-container">
-                <figure class="centered-figure">
-                    <img src="img/CVX.png" alt="CVX" width="450" height="350">
-                    <figcaption>In this toy example, the left is nonconvex storage bid-in cost; and the right is convex with the 
-                        sufficient condition represented by the red arrow.
-                    </figcaption>
-                </figure>
-            </div>   
-        
-        <!-- Add other content related to project experience here -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ResearchHighlights.html">Research Highlights</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="Mylab.html">Mylab</a></li>
+            <li><a href="others.html">Others</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="cv-container">
+    <div class="cv-header">
+        <h1>Cong Chen</h1>
+        <p>My Lab @ Dartmouth College</p>
     </div>
+
+    <section class="lab-members">
+        <h2>Lab Members</h2>
+
+        <!-- Undergraduate Researcher -->
+        <article class="member-card">
+            <img src="img/AToler.jpg" alt="Anderson Toler">
+            <div class="member-info">
+                <h3>Anderson Toler</h3>
+                <p><strong>Undergraduate Researcher</strong><br>
+                Thayer School of Engineering, Dartmouth College</p>
+                <p>
+                    Anderson is a junior majoring in Electrical Engineering, with a minor 
+                    in Chinese and Statistics. He is interested in power systems modeling 
+                    and grid resilience in our evolving energy grid.
+                </p>
+                <p>
+                    His research focuses on analyzing energy storage systems and simulating 
+                    human behavior in demand-side energy markets.
+                </p>
+                <p>
+                    Outside of school, he enjoys exploring the great outdoors and finding 
+                    great books and articles to pore over (suggestions welcome :)).
+                </p>
+            </div>
+        </article>
+
+        <!-- Graduate Research Assistant -->
+        <article class="member-card">
+            <img src="img/StudentPhoto.jpg" alt="Justin Sang-il Kim">
+            <div class="member-info">
+                <h3>Justin Sang-il Kim</h3>
+                <p><strong>Graduate Research Assistant</strong><br>
+                Thayer School of Engineering, Dartmouth College</p>
+                <p>
+                    He/She is conducting research on how AI and large language model (LLM)-based 
+                    agents can (1) model and simulate participant behavior in energy markets and 
+                    (2) assist with strategic decision-making tasks, including bidding strategy optimization.
+                </p>
+                <p>
+                    Outside of research, enjoys skiing and discovering new music.
+                </p>
+                <p>
+                    <strong>Education</strong><br>
+                    B.A., Engineering Sciences, Dartmouth College (2025)<br>
+                    B.E., Energy Engineering, Dartmouth College (2025)
+                </p>
+            </div>
+        </article>
+
+        <!-- Postdoctoral Researcher -->
+        <article class="member-card">
+            <img src="img/BFang.png" alt="Bohang Fang">
+            <div class="member-info">
+                <h3>Bohang Fang</h3>
+                <p><strong>Postdoctoral Researcher</strong><br>
+                Thayer School of Engineering, Dartmouth College</p>
+                <p>
+                    Bohang’s research focuses on convex optimization for power system 
+                    operation and planning, particularly unbalanced three-phase distribution 
+                    networks and DER integration. Recently, he has been developing scalable 
+                    algorithms for computing dynamic operating envelopes (DOEs).
+                </p>
+                <p>
+                    <strong>Education</strong><br>
+                    B.S., Mathematics & Physics Basic Science, UESTC (2020)<br>
+                    Ph.D., Information Engineering, The Chinese University of Hong Kong (2025)
+                </p>
+                <p>
+                    <a href="https://bohang-fang.github.io/" target="_blank">Personal Website</a>
+                </p>
+            </div>
+        </article>
+
+        <!-- Ph.D. Students -->
+        <article class="member-card">
+            <img src="img/SLi.jpg" alt="Shaoze Li">
+            <div class="member-info">
+                <h3>Shaoze Li</h3>
+                <p><strong>Ph.D. Student</strong><br>
+                Thayer School of Engineering, Dartmouth College</p>
+                <p>
+                    Shaoze conducts research at the intersection of optimization, economics, 
+                    and electricity markets.
+                </p>
+                <p>
+                    Outside of research, he enjoys weightlifting and playing basketball.
+                </p>
+                <p>
+                    <strong>Education</strong><br>
+                    M.S., Management Science and Engineering, University of Chinese Academy of Sciences (UCAS)<br>
+                    B.S., Management Science and Engineering, North China Electric Power University (NCEPU)
+                </p>
+            </div>
+        </article>
+
+        <article class="member-card">
+            <img src="img/JLiu.jpg" alt="Jingguan Liu">
+            <div class="member-info">
+                <h3>Jingguan Liu</h3>
+                <p><strong>Ph.D. Student (Visiting)</strong><br>
+                Thayer School of Engineering, Dartmouth College</p>
+                <p>
+                    Jingguan’s research focuses on demand-side aggregation, energy storage 
+                    operation, and optimization under uncertainty.
+                </p>
+                <p>
+                    In his free time, he enjoys traveling and seeking new experiences, guided 
+                    by the belief that it is not failure we regret most, but the chances we never take.
+                </p>
+                <p>
+                    <strong>Education</strong><br>
+                    B.S., Electrical Engineering, Huazhong University of Science and Technology (2022)<br>
+                    Ph.D. Candidate, Huazhong University of Science and Technology<br>
+                    Visiting Student, Dartmouth College (since September 2025)
+                </p>
+                <p>
+                    Ph.D. Advisors: Prof. Xiaomeng Ai and Prof. Jiakun Fang<br>
+                    Visiting Advisor: Prof. Cong Chen
+                </p>
+            </div>
+        </article>
+
+        <article class="member-card">
+            <img src="img/YYu.jpg" alt="Yaxuan Yu">
+            <div class="member-info">
+                <h3>Yaxuan Yu</h3>
+                <p><strong>Ph.D. Student</strong><br>
+                Thayer School of Engineering, Dartmouth College</p>
+                <p>
+                    Yaxuan conducts research on electricity market design, with a particular 
+                    interest in pricing mechanisms for real-time power systems with energy 
+                    storage. Her work focuses on improving market transparency and efficiency 
+                    under intertemporal operational constraints.
+                </p>
+                <p>
+                    Beyond research, she enjoys reading novels, hiking, ice skating, 
+                    painting, cooking, and traveling.
+                </p>
+                <p>
+                    <strong>Education</strong><br>
+                    M.S., Management Science and Engineering, Tongji University<br>
+                    B.S., Industrial Engineering, Sichuan University
+                </p>
+            </div>
+        </article>
+
+        <article class="member-card">
+            <img src="img/StudentPhoto.jpg" alt="Haotian Yang">
+            <div class="member-info">
+                <h3>Haotian Yang (HYang)</h3>
+                <p><strong>Ph.D. Student (Visiting)</strong><br>
+                Thayer School of Engineering, Dartmouth College</p>
+                <p>
+                    I am currently working on energy management strategies for integrated energy systems, 
+                    with a focus on pricing design, demand response analysis, and market-based trading mechanisms. 
+                    My research aims to improve the efficiency and flexibility of modern energy markets.
+                </p>
+                <p>
+                    Outside of research, I enjoy snowboarding and swimming.
+                </p>
+                <p>
+                    <strong>Education</strong><br>
+                    B.S., Electrical Engineering, Taiyuan University of Technology<br>
+                    Ph.D., Electrical Engineering (via undergraduate recommendation), Taiyuan University of Technology<br>
+                    Supervisor: Hongbin Sun, Academician of Chinese Academy of Sciences
+                </p>
+            </div>
+        </article>
+
+    </section>
+</div>
+
 </body>
 </html>
